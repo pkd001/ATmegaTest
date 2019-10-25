@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name ATmegaTest-cache)(type Legacy)(uri ${KIPRJMOD}/ATmegaTest-cache.lib)(options "")(descr ""))
+)
