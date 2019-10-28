@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:ATmegaTest-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -294,7 +293,7 @@ L Connector_Generic:Conn_01x10 P5
 U 1 1 56D72368
 P 9950 1550
 F 0 "P5" H 9950 2050 50  0000 C CNN
-F 1 "PWM" V 10050 1550 50  0000 C CNN
+F 1 "PWM" V 10050 1550 50  0000 C CNB
 F 2 "Socket_Arduino_Mega:Socket_Strip_Arduino_1x10" H 9950 1550 50  0001 C CNN
 F 3 "" H 9950 1550 50  0000 C CNN
 	1    9950 1550
@@ -681,4 +680,53 @@ F 3 "" H 6750 1920 50  0000 C CNN
 	1    6750 1920
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DB90B5B
+P 6260 935
+F 0 "#PWR?" H 6260 785 50  0001 C CNN
+F 1 "+3.3V" V 6260 1185 50  0000 C CNN
+F 2 "" H 6260 935 50  0000 C CNN
+F 3 "" H 6260 935 50  0000 C CNN
+	1    6260 935 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5DB97808
+P 6260 1145
+F 0 "R?" H 6319 1191 50  0000 L CNN
+F 1 "10k" H 6319 1100 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6260 1145 50  0001 C CNN
+F 3 "~" H 6260 1145 50  0001 C CNN
+	1    6260 1145
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6260 1245 6260 1305
+Wire Wire Line
+	6260 1045 6260 935 
+Wire Wire Line
+	6260 1760 6750 1760
+Connection ~ 6750 1760
+$Comp
+L Device:R_Small R?
+U 1 1 5DBA2C8F
+P 6260 1465
+F 0 "R?" H 6319 1511 50  0000 L CNN
+F 1 "10k" H 6319 1420 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6260 1465 50  0001 C CNN
+F 3 "~" H 6260 1465 50  0001 C CNN
+	1    6260 1465
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6260 1565 6260 1760
+Wire Wire Line
+	6260 1305 6560 1305
+Connection ~ 6260 1305
+Wire Wire Line
+	6260 1305 6260 1365
+Text Label 6560 1305 0    50   ~ 0
+A0
 $EndSCHEMATC
